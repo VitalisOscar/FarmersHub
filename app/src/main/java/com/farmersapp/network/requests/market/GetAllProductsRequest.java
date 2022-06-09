@@ -2,7 +2,7 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.Product;
 import com.farmersapp.models.User;
@@ -12,7 +12,7 @@ import com.google.firebase.firestore.Query;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class GetAllProductsRequest extends FirebaseRequest {
+public class GetAllProductsRequest extends Request {
 
     Map<String, Object> filters;
     int page = 0, limit = 15;

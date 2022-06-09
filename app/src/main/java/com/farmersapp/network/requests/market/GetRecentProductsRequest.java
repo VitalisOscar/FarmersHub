@@ -2,7 +2,7 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.Product;
 import com.farmersapp.models.User;
@@ -11,7 +11,7 @@ import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 
-public class GetRecentProductsRequest extends FirebaseRequest {
+public class GetRecentProductsRequest extends Request {
 
     @Override
     public void dispatch(Context context, User loggedInUser, RequestDispatcher dispatcher) {

@@ -2,7 +2,7 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.Category;
 import com.farmersapp.models.User;
@@ -10,7 +10,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.ArrayList;
 
-public class GetCategoriesRequest extends FirebaseRequest {
+public class GetCategoriesRequest extends Request {
 
     @Override
     public void dispatch(Context context, User loggedInUser, RequestDispatcher dispatcher) {

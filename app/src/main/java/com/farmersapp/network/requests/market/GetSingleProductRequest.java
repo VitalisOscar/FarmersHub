@@ -2,13 +2,13 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.Product;
 import com.farmersapp.models.User;
 import com.google.firebase.firestore.Query;
 
-public class GetSingleProductRequest extends FirebaseRequest {
+public class GetSingleProductRequest extends Request {
 
     // Seller d limits to a single product for a particular seller, e.g from a seller's dashboard
     String id, seller_id;

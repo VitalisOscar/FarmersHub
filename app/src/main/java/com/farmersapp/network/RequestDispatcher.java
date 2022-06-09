@@ -49,8 +49,8 @@ public class RequestDispatcher {
         return this;
     }
 
-    public void dispatch(Request firebaseRequest){
-        firebaseRequest.dispatch(
+    public void dispatch(Request request){
+        request.dispatch(
             this.context,
             this.loggedInUser,
             this

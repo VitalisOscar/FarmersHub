@@ -2,11 +2,11 @@ package com.farmersapp.network.requests.auth;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.User;
 
-public class SignupRequest extends FirebaseRequest {
+public class SignupRequest extends Request {
     User user;
     String password;
 
