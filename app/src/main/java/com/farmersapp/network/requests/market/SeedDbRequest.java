@@ -2,7 +2,7 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.helpers.Utils;
 import com.farmersapp.models.Category;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SeedDbRequest extends FirebaseRequest {
+public class SeedDbRequest extends Request {
 
     @Override
     public void dispatch(Context context, User loggedInUser, RequestDispatcher dispatcher) {

@@ -2,7 +2,7 @@ package com.farmersapp.network.requests.market;
 
 import android.content.Context;
 
-import com.farmersapp.network.FirebaseRequest;
+import com.farmersapp.network.Request;
 import com.farmersapp.network.RequestDispatcher;
 import com.farmersapp.models.Product;
 import com.farmersapp.models.User;
@@ -12,7 +12,7 @@ import com.google.firebase.firestore.Query;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class GetAllProductsRequest extends FirebaseRequest {
+public class GetAllProductsRequest extends Request {
 
     Map<String, Object> filters;
     int page = 0, limit = 15;
@@ -42,11 +42,11 @@ public class GetAllProductsRequest extends FirebaseRequest {
 
         // Add Filters
         if(filters.containsKey("category_id")){
-            query = query.whereLessThanOrEqualTo("category.id", filters.get("category_id"));
+            query = query.whereEqualTo("category.id", filters.get("category_id"));
         }
 
         if(filters.containsKey("seller_id")){
-            query = query.whereLessThanOrEqualTo("seller.id", filters.get("seller_id"));
+            query = query.whereEqualTo("seller.id", filters.get("seller_id"));
         }
 
         if(filters.containsKey("keyword")){
@@ -56,16 +56,31 @@ public class GetAllProductsRequest extends FirebaseRequest {
         query = query.orderBy("timestamp", Query.Direction.DESCENDING);
 
         // Pagination
-        if(page > 0 && previousSnapshot != null){
-            query = query.startAfter(previousSnapshot).limit(limit);
+        if(page > 0){
+            query = query.limit(limit);
+
+            if(previousSnapshot != null) {
+                query = query.startAfter(previousSnapshot);
+            }
         }
 
         query.get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     ArrayList<Product> results = new ArrayList<>();
 
+                    // Total fetched
+                    int total = queryDocumentSnapshots.size();
+
+                    int i = 0;
                     for(DocumentSnapshot snapshot:queryDocumentSnapshots){
                         results.add(Product.fromMap(snapshot.getData()));
+
+                        // Set the last snapshot. Next page will begin here
+                        if(i == total - 1){
+                            previousSnapshot = snapshot;
+                        }
+
+                        i++;
                     }
 
                     // Return result

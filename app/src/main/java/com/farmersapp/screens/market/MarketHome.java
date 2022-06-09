@@ -1,6 +1,7 @@
 package com.farmersapp.screens.market;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -110,6 +111,10 @@ public class MarketHome extends Fragment {
 
     private void initListeners(){
         // onClickListeners etc here
+        // On click view all, open products screen
+        binding.recentsViewAll.setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), ProductsActivity.class));
+        });
     }
 
 

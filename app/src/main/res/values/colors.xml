@@ -21,4 +21,5 @@
     <color name="colorBlue">#3F51B5</color>
     <color name="colorLight">#eee</color>
     <color name="colorOrange">#FF5722</color>
+    <color name="colorWarning">#FF5722</color>
 </resources>

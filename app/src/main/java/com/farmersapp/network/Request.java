@@ -3,9 +3,11 @@ package com.farmersapp.network;
 import android.content.Context;
 
 import com.farmersapp.models.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
- * Base class for a network request to do something
+ * Base class for one or more requests to firebase
  */
 public abstract class Request {
     /**
@@ -15,4 +17,13 @@ public abstract class Request {
      * @param dispatcher The instance of the request dispatcher that dispatched this request, to receive callbacks
      */
     public abstract void dispatch(Context context, User loggedInUser, RequestDispatcher dispatcher);
+
+
+    protected FirebaseAuth getAuth(){
+        return FirebaseAuth.getInstance();
+    }
+
+    protected FirebaseFirestore getFirestore(){
+        return FirebaseFirestore.getInstance();
+    }
 }

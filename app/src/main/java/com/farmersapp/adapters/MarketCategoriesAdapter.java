@@ -1,6 +1,7 @@
 package com.farmersapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.farmersapp.databinding.ViewCategoryBinding;
 import com.farmersapp.models.Category;
+import com.farmersapp.screens.market.ProductsActivity;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,15 @@ public class MarketCategoriesAdapter extends RecyclerView.Adapter<MarketCategori
         Glide.with(context)
                 .load(category.getImageUrl())
                 .into(holder.binding.image);
+
+        // When clicked, open products screen
+        holder.binding.wrap.setOnClickListener(view -> {
+            Intent intent = new Intent(context, ProductsActivity.class);
+            intent.putExtra("category_id", category.getId());
+            intent.putExtra("category_name", category.getName());
+
+            context.startActivity(intent);
+        });
     }
 
     @Override

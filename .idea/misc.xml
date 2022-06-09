@@ -11,8 +11,10 @@
         <entry key="app/src/main/res/layout/activity_app_update.xml" value="0.15353260869565216" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.15353260869565216" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/activity_products.xml" value="0.1213768115942029" />
         <entry key="app/src/main/res/layout/activity_re_login.xml" value="0.15353260869565216" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/activity_single_product.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_user_account.xml" value="0.17028985507246377" />
         <entry key="app/src/main/res/layout/dialog_staff_select.xml" value="0.15353260869565216" />
         <entry key="app/src/main/res/layout/dialog_visitor_info.xml" value="0.17028985507246377" />
@@ -21,9 +23,13 @@
         <entry key="app/src/main/res/layout/fragment_market_home.xml" value="0.17028985507246377" />
         <entry key="app/src/main/res/layout/fragment_vehicle_check_out.xml" value="0.15353260869565216" />
         <entry key="app/src/main/res/layout/layout_checkin_vehicle.xml" value="0.15353260869565216" />
+        <entry key="app/src/main/res/layout/layout_fetch_error.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/layout_no_data.xml" value="0.17028985507246377" />
         <entry key="app/src/main/res/layout/placeholder_category.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/placeholder_product.xml" value="0.33" />
         <entry key="app/src/main/res/layout/view_category.xml" value="0.17028985507246377" />
         <entry key="app/src/main/res/layout/view_grid_product.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/view_product.xml" value="0.33" />
         <entry key="app/src/main/res/menu/main.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/main_bottom.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/main_forum.xml" value="0.19375" />

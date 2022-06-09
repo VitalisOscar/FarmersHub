@@ -271,7 +271,7 @@
                 android:orientation="vertical"
                 >
 
-                <FrameLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
@@ -286,8 +286,22 @@
                         style="@style/TextAppearance.AppCompat.Title"
                         android:textColor="@color/colorWhite"
                         android:text="Recently Added"
+                        android:layout_centerVertical="true"
                         />
-                </FrameLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="View All"
+                        android:layout_centerVertical="true"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/recentsViewAll"
+                        />
+                </RelativeLayout>
 
                 <FrameLayout
                     android:layout_width="match_parent"

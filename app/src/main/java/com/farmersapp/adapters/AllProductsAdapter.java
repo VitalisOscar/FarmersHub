@@ -9,17 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.farmersapp.databinding.ViewGridProductBinding;
+import com.farmersapp.databinding.ViewProductBinding;
 import com.farmersapp.models.Product;
 import com.farmersapp.screens.market.SingleProductActivity;
 
 import java.util.ArrayList;
 
-public class MarketGridProductsAdapter extends RecyclerView.Adapter<MarketGridProductsAdapter.CategoryViewHolder> {
+public class AllProductsAdapter extends RecyclerView.Adapter<AllProductsAdapter.CategoryViewHolder> {
     private Context context;
     private ArrayList<Product> products;
 
-    public MarketGridProductsAdapter(Context context, ArrayList<Product> products) {
+    public AllProductsAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
         this.products = products;
     }
@@ -27,7 +27,7 @@ public class MarketGridProductsAdapter extends RecyclerView.Adapter<MarketGridPr
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ViewGridProductBinding binding = ViewGridProductBinding.inflate(LayoutInflater.from(context), parent, false);
+        ViewProductBinding binding = ViewProductBinding.inflate(LayoutInflater.from(context), parent, false);
         return new CategoryViewHolder(binding);
     }
 
@@ -37,6 +37,7 @@ public class MarketGridProductsAdapter extends RecyclerView.Adapter<MarketGridPr
 
         holder.binding.title.setText(product.getName());
         holder.binding.price.setText(product.getPrice());
+        holder.binding.category.setText(product.getCategory().getName());
 
         // Load the image
         Glide.with(context)
@@ -59,9 +60,9 @@ public class MarketGridProductsAdapter extends RecyclerView.Adapter<MarketGridPr
     }
 
     protected static class CategoryViewHolder extends RecyclerView.ViewHolder{
-        ViewGridProductBinding binding;
+        ViewProductBinding binding;
 
-        public CategoryViewHolder(ViewGridProductBinding binding) {
+        public CategoryViewHolder(ViewProductBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }

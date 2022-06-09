@@ -92,8 +92,8 @@ public class MainActivity extends BaseActivity {
         // Options Menu
         binding.toolbar.setOnMenuItemClickListener(item -> {
             if(item.getItemId() == R.id.itemSeed){
-                RequestDispatcher.getInstance(MainActivity.this)
-                        .dispatch(new SeedDbRequest());
+//                RequestDispatcher.getInstance(MainActivity.this)
+//                        .dispatch(new SeedDbRequest());
 
                 return true;
             }

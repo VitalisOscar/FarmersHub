@@ -19,6 +19,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".screens.market.SingleProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.market.ProductsActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.auth.SignupActivity"
             android:exported="false" />
         <activity
