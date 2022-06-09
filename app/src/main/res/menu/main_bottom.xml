@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Market"
+        android:id="@+id/itemMarket"
+        android:icon="@drawable/cart_outline"
+        />
+
+    <item
+        android:title="Forum"
+        android:id="@+id/itemForum"
+        android:icon="@drawable/forum_outline"
+        />
+
+    <item
+        android:title="More"
+        android:id="@+id/itemMore"
+        android:icon="@drawable/more_outline"
+        />
+</menu>
